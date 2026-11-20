@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block heading %}Meetings{% endblock %}{% block content %}<div class="panel"><a class="btn btn-primary mb-3" href="{% url 'add_meeting' %}">Schedule meeting</a>{% for m in meetings %}<p>{{ m.scheduled_at }} · {{ m.student }} · {{ m.agenda }} · {{ m.get_status_display }}</p>{% empty %}<p>No meetings.</p>{% endfor %}</div>{% endblock %}

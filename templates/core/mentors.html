@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block heading %}Teachers{% endblock %}{% block content %}<div class="panel"><h2>Teacher directory</h2>{% for m in mentors %}<p><strong>{{ m }}</strong> · {{ m.department }} · {{ m.designation }} · {{ m.phone }}</p>{% empty %}<p>No teachers registered. Create teacher accounts in Admin.</p>{% endfor %}</div>{% endblock %}

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block heading %}Assignments{% endblock %}{% block content %}<div class="panel"><h2>Student–teacher assignments</h2>{% for a in assignments %}<p>{{ a.student }} → {{ a.mentor }} · {{ a.assigned_on }}</p>{% empty %}<p>No assignments.</p>{% endfor %}</div>{% endblock %}
